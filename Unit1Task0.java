@@ -28,7 +28,7 @@ public class Unit1Task0 {
         System.out.println("month & day = " + (month & day));   //1010 & 10010 = 1
         System.out.println("month ^ day = " + (month ^ day));   //1010 ^ 10010 = 11010
         System.out.println("~day = " + (~day));     //~10010 = ?
-        
+
 
     }
 }

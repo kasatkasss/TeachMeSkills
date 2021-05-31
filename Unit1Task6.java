@@ -4,7 +4,9 @@ public class Unit1Task6 {
         int b = -1;
         if (a > b)
             System.out.println(a);
-        else
+        else if(a < b)
             System.out.println(b);
+        else
+            System.out.println("Числа равны");
     }
 }

@@ -10,9 +10,11 @@ public class Unit1Task8 {
             int secondNumber = Integer.parseInt(reader.readLine());
             if(firstNumber > secondNumber)
                 System.out.println("Большее число " + firstNumber);
-            else
+            else if(firstNumber < secondNumber)
                 System.out.println("Большее число " + secondNumber);
-        }
+            else
+                System.out.println("Числа равны");
+    }
     }
 
 
