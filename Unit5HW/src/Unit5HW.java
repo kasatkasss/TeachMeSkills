@@ -1,19 +1,34 @@
+import java.util.Random;
+import java.util.Scanner;
+
 public class Unit5HW {
     public static void main(String[] args) {
+        Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите число 0 или 1: ");
+        int a = scanner.nextInt();
+        int b = random.nextInt(1);
         Computer computer = new Computer();
         computer.getProcessor();
         computer.getRam();
         computer.getStorage();
-        computer.turnOn();
-        computer.turnOff();
-        computer.turnOn();
-        computer.turnOn();
-        computer.turnOff();
-        computer.turnOff();
-        computer.turnOn();
-        computer.turnOn();
-        computer.turnOff();
-        computer.turnOn();
+        if(a!=b){
+            computer.turnOn();
+        }
+        else {
+            System.out.println("Компьютер сгорел");
+            computer.comprip = true;
+        }
+        System.out.print("Введите число 0 или 1: ");
+        a = scanner.nextInt();
+        b = random.nextInt(1);
+        if(a!=b){
+            computer.turnOff();
+        }
+        else{
+            System.out.println("Компьютер сгорел");
+            computer.comprip = true;
+        }
     }
     static class Computer{
         String storage = "SSD Samsung EVO 860 500gb";
@@ -33,6 +48,7 @@ public class Unit5HW {
             System.out.println(ram);
         }
         void turnOn(){
+
             if(resource > 0 ){
                 System.out.println("У вас осталось " + resource + " попытки включить компьютер.");
             }
